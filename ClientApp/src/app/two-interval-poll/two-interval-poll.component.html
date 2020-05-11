@@ -1,0 +1,8 @@
+<h1>Two Interval Polling</h1>
+
+<p>When the button is clicked, the component will begin "polling" the value of the isVerifiedCheckBox. Each time it polls, the number displayed will increase by one.  The component will poll every 3 seconds and doesn't stop until it finds isVerifiedCheckBox to be true.  Once it does, it sets isValidated to true. </p>
+
+<p aria-live="polite">Current poll count: <strong>{{ pollCount }}</strong></p>
+<p aria-live="polite">Is Validated: <input type="checkbox" [checked]="isValidated" (change)="isValidated = !isValidated"/></p>
+<p aria-live="polite">Is Verified:  <input type="checkbox" [checked]="isVerifiedCheckBox" (change)="isVerifiedCheckBox = !isVerifiedCheckBox"/></p>
+<button class="btn btn-primary" (click)="startPolling()">Start Polling</button>
